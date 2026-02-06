@@ -6,4 +6,11 @@ opencv-python
 numpy
 SpeechRecognition
 soundfile
-
+openai
+io
+time
+cv2
+subprocess
+os
+math
+wave
