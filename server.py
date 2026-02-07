@@ -46,7 +46,7 @@ class PiperTTS:
             [
                 "piper/piper",
                 "--model",
-                "piper/models/hi_IN-priyamvada-medium.onnx",
+                "models/hi_IN-priyamvada-medium.onnx",
                 "--output_file",
                 "-"
             ],
