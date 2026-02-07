@@ -7,4 +7,5 @@ numpy
 SpeechRecognition
 soundfile
 openai
+python-multipart
 
