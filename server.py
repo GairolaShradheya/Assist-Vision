@@ -44,7 +44,7 @@ class PiperTTS:
     def __init__(self):
         self.proc = subprocess.Popen(
             [
-                "piper/piper",
+                "piper/piper/piper",
                 "--model",
                 "models/hi_IN-priyamvada-medium.onnx",
                 "--output_file",
@@ -188,4 +188,5 @@ async def assist(
         content=audio_out,
         media_type="audio/wav"
     )
+
 
