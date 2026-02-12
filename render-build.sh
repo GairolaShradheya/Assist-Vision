@@ -12,6 +12,8 @@ curl -L -o piper/piper.tar.gz https://github.com/rhasspy/piper/releases/latest/d
 tar -xzf piper/piper.tar.gz -C piper
 rm piper/piper.tar.gz
 
+ls -R piper
+
 # Make executable
 chmod +x piper/piper
 
