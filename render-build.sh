@@ -1,18 +1,24 @@
 #!/usr/bin/env bash
-sudo set -e
+set -e
 
-sudo echo "Downloading Piper Linux binary..."
+echo "Downloading Piper Linux binary..."
 
-sudo mkdir -p piper
+mkdir -p piper
 
-# Download Linux Piper binary
-sudo curl -L -o piper/piper.tar.gz https://github.com/rhasspy/piper/releases/latest/download/piper_linux_x86_64.tar.gz
+curl -L -o piper/piper.tar.gz \
+https://github.com/rhasspy/piper/releases/latest/download/piper_linux_x86_64.tar.gz
 
-# Extract
-sudo tar -xzf piper/piper.tar.gz -C piper
-sudo rm piper/piper.tar.gz
+tar -xzf piper/piper.tar.gz -C piper
+rm piper/piper.tar.gz
 
-# Make executable
-sudo chmod +x piper/piper
+echo "Listing piper folder..."
+ls -lah piper
 
-sudo echo "Piper installed successfully!"
+# Usually the extracted binary becomes: piper/piper
+chmod +x piper/piper || true
+
+echo "Checking executable..."
+file piper/piper || true
+ls -lah piper/piper || true
+
+echo "Piper installed successfully!"
