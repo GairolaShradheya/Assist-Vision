@@ -11,14 +11,14 @@ https://github.com/rhasspy/piper/releases/latest/download/piper_linux_x86_64.tar
 tar -xzf piper/piper.tar.gz -C piper
 rm piper/piper.tar.gz
 
-echo "Listing piper folder..."
+echo "Checking piper contents..."
 ls -lah piper
 
-# Usually the extracted binary becomes: piper/piper
-chmod +x piper/piper || true
+echo "Making executable..."
+chmod 755 piper/piper
 
-echo "Checking executable..."
-file piper/piper || true
-ls -lah piper/piper || true
+echo "Checking file type..."
+file piper/piper
 
-echo "Piper installed successfully!"
+echo "Done."
+
